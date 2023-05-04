@@ -40,7 +40,9 @@ function Home() {
                         <td>{item.Name}</td>
                         <td>{item.Age}</td>
                         <td>
-                          <Button onClick={() => alert(item.id)}>Edit</Button>
+                          <Link to={`/edit`}>
+                            <Button onClick={() => alert(item.id)}>Edit</Button>
+                          </Link>
                           &nbsp;
                           <Button onClick={() => handleDelete(item.id)}>
                             Delete
@@ -58,6 +60,10 @@ function Home() {
             }
           </tbody>
         </Table>
+        <br />
+        <Link className="d-grid gap-2" to="/create">
+          <Button size="lg">Create</Button>
+        </Link>
       </div>
     </Fragment>
   );
