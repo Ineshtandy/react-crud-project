@@ -15,3 +15,5 @@ const Employees = [
     Age: "23",
   },
 ];
+
+export default Employees;
