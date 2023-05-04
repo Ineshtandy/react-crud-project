@@ -19,6 +19,10 @@ function Home() {
     history("/");
   };
 
+  const changeToCreate = () => {
+    history("/create");
+  };
+
   return (
     <Fragment>
       <div style={{ margin: "10rem" }}>
@@ -61,9 +65,11 @@ function Home() {
           </tbody>
         </Table>
         <br />
-        <Link className="d-grid gap-2" to="/create">
-          <Button size="lg">Create</Button>
-        </Link>
+        {/* <Link className="d-grid gap-2" to="/create">
+        </Link> */}
+        <Button size="lg" onClick={changeToCreate}>
+          Create
+        </Button>
       </div>
     </Fragment>
   );
